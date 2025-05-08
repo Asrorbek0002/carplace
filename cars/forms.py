@@ -1,5 +1,7 @@
-from django import  forms
+from django import forms
+
 from cars.models import Brand
+
 
 class ContactMessageForm(forms.Form):
     name = forms.CharField(max_length=100)
@@ -10,7 +12,3 @@ class ContactMessageForm(forms.Form):
 
 class SearchBrandForm(forms.Form):
     brand = forms.ModelChoiceField(queryset=Brand.objects.all())
-
-
-
-
